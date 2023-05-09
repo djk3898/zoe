@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Zoe.Usuari">
+    <Position X="1.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAACAEIAAgACAIIACCCAAAAkAAAAAAAAABAgA=</HashCode>
+      <FileName>Usuari.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoe.Producte">
+    <Position X="7.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAIAAAACAAAQQAAAEMAAAAAgA=</HashCode>
+      <FileName>Producte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoe.Pack">
+    <Position X="4.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAAAAAAAAAAAIAAAACAAABQAAAAMAAAAAgA=</HashCode>
+      <FileName>Pack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoe.Botiga">
+    <Position X="8" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACQAAAAAAAAAAAAAAIAAAADAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Proveidor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zoe.Comanda">
+    <Position X="1.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAABQEAAAAACAAAAAIAAAAAECQAAAAAAA=</HashCode>
+      <FileName>Comanda.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pack" />
+      <Property Name="Usuari" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
