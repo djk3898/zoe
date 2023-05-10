@@ -10,6 +10,7 @@ namespace Zoe
         private string nom;
         private List<Producte> productes;
         private List<string> proveidors;
+        private List<string> categories;
 
         public string Nom
         {

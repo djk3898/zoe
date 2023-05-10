@@ -14,6 +14,7 @@ namespace Zoe
         private string nom;
         private string descripcio;
         private string proveidor;
+        private string categoria;
         private int estoc;
         private double preu;
 
