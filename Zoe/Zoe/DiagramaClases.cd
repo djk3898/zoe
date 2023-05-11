@@ -25,7 +25,7 @@
     <Position X="4" Y="7" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAACQAAAAAAAAAAAAAAIAAQADAAAAAAAAAAAAAAIAA=</HashCode>
-      <FileName>Proveidor.cs</FileName>
+      <FileName>Botiga.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Zoe.Comanda">
