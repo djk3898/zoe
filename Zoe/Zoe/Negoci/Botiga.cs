@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Zoe
+namespace Zoe.Negoci
 {
     public class Botiga
     {
