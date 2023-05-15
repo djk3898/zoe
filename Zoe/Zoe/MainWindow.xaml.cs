@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zoe.AccesDades;
 
 namespace Zoe
 {
@@ -24,6 +25,11 @@ namespace Zoe
         {
             InitializeComponent();
         }
-        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Connexio c = new Connexio();
+            c.Connectar();
+        }
     }
 }
