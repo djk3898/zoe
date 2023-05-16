@@ -28,8 +28,8 @@ namespace Zoe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Connexio c = new Connexio();
-            //c.Connectar();
+            //Command cmd = new();
+            //txtbox_Query.Text = cmd.Select(txtbox_Query.Text);
         }
     }
 }

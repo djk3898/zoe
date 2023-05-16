@@ -11,14 +11,14 @@ namespace Zoe.AccesDades
     public class Connexio
     {
         //Atributs
-        MySqlConnection connexio;
-        static string servidor = "192.168.4.112";
-        static string port = "3306";
-        static string usuari = "zoe";
-        static string contra = "zoe";
-        static string baseDades = "zoe";
+        private MySqlConnection connexio;
+        private static string servidor = "192.168.4.112";
+        private static string port = "3306";
+        private static string usuari = "zoe";
+        private static string contra = "zoe";
+        private static string baseDades = "zoe";
 
-        string stringConnexio = $"server={servidor};port={port};user={usuari};password={contra};database={baseDades};";
+        private string stringConnexio = $"server={servidor};port={port};user={usuari};password={contra};database={baseDades};";
 
         public MySqlConnection Connectar()
         {
@@ -34,12 +34,10 @@ namespace Zoe.AccesDades
                 MessageBox.Show("ERROR\nNo s'ha pogut obrir la connexió amb la BBDD");
                 return connexio;
             }
-            finally
+
+            if(connexio != null)
             {
-                if(connexio != null)
-                {
-                    connexio.Close();
-                }
+                connexio.Close();
             }
         }
     }
