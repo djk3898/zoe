@@ -5,10 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zoe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="591" Width="793">
+    <Window.Resources>
+        <FontFamily x:Key="CustomFont">/Zoe;component/Gloss_And_Bloom.ttf#GlossAndBloom</FontFamily>
+    </Window.Resources>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox x:Name="txtbox_Query" HorizontalAlignment="Center" Margin="0,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-
+        <TabControl Margin="0,0,0,-5">
+            <TabItem x:Name="tabInici" Header="">
+                <Grid x:Name="gridInici" Width="794">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Clases/Imagenes/Sin título.png"/>
+                    </Grid.Background>
+                    <Label x:Name="labelUsuari" Content="Usuario:" HorizontalAlignment="Left" Margin="228,142,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                    <Label x:Name="labelContra" Content="Contraseña:" HorizontalAlignment="Left" Margin="228,214,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontWeight="Medium" FontStretch="ExtraExpanded" ForceCursor="True"/>
+                    <TextBox x:Name="txtboxUsuari" HorizontalAlignment="Left" Margin="397,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <Button x:Name="bttLogin" Content="Iniciar sesión" HorizontalAlignment="Left" Margin="430,282,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="112" FontFamily="Gloss And Bloom" FontWeight="Medium" BorderBrush="#FF07635D" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="29" BorderThickness="2,2,2,2" ClipToBounds="True"/>
+                    <PasswordBox x:Name="paswwBox" HorizontalAlignment="Left" Margin="397,223,0,0" VerticalAlignment="Top" Width="179" Height="23"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="" IsSelected="True">
+                <Grid Background="#FFE5E5E5">
+                    <TabControl Margin="0,98,0,0">
+                        <TabItem Header="TabItem">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                        <TabItem Header="TabItem">
+                            <Grid Background="#FFE5E5E5"/>
+                        </TabItem>
+                    </TabControl>
+                    <Rectangle HorizontalAlignment="Center" Height="104" VerticalAlignment="Top" Width="787">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/Clases/Imagenes/Sin título.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Height="104" Width="108" Foreground="{x:Null}" BorderBrush="{x:Null}">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Clases/Imagenes/image0.png"/>
+                        </Button.Background>
+                    </Button>
+                    <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="156,45,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Focusable="False"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbtNuevoUsuario" HorizontalAlignment="Center" Height="20" Header="TabItem" VerticalAlignment="Center" Width="54">
+                <Grid x:Name="GridNuevoUsuario" Margin="-10,0,-7,0" Height="564">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="/Clases/Imagenes/Sin título.png"/>
+                    </Grid.Background>
+                    <Label x:Name="labelUsuari1" Content="Email:" HorizontalAlignment="Left" Margin="228,187,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                    <Label x:Name="labelContra1" Content="Dirección:" HorizontalAlignment="Left" Margin="228,269,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontWeight="Medium" FontStretch="ExtraExpanded" ForceCursor="True"/>
+                    <TextBox x:Name="txtboxUsuari1" HorizontalAlignment="Left" Margin="396,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <Button x:Name="bttLogin1" Content="Registrarse" HorizontalAlignment="Left" Margin="430,443,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="112" FontFamily="Gloss And Bloom" FontWeight="Medium" BorderBrush="#FF07635D" Grid.Column="0" Height="29" BorderThickness="2,2,2,2" ClipToBounds="True"/>
+                    <Label x:Name="labelUsuari1_Copy" Content="CP:" HorizontalAlignment="Left" Margin="228,365,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                    <Label x:Name="labelUsuari1_Copy1" Content="Provincia:" HorizontalAlignment="Left" Margin="228,318,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                    <Label x:Name="labelUsuari1_Copy2" Content="Teléfono:" HorizontalAlignment="Left" Margin="228,229,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                    <Label x:Name="labelUsuari1_Copy4" Content="Nombre:" HorizontalAlignment="Left" Margin="228,95,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                    <Label x:Name="labelContra1_Copy" Content="Contraseña:" HorizontalAlignment="Left" Margin="228,139,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="137" FontFamily="Gloss And Bloom" FontSize="14" FontWeight="Medium" FontStretch="ExtraExpanded" ForceCursor="True"/>
+                    <TextBox x:Name="txtboxUsuari1_Copy1" HorizontalAlignment="Left" Margin="396,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="22"/>
+                    <TextBox x:Name="txtboxUsuari1_Copy2" HorizontalAlignment="Left" Margin="397,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <TextBox x:Name="txtboxUsuari1_Copy3" HorizontalAlignment="Left" Margin="397,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <TextBox x:Name="txtboxUsuari1_Copy4" HorizontalAlignment="Left" Margin="397,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <TextBox x:Name="txtboxUsuari1_Copy5" HorizontalAlignment="Left" Margin="396,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <TextBox x:Name="txtboxUsuari1_Copy6" HorizontalAlignment="Left" Margin="397,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="22"/>
+                    <Label x:Name="labelUsuari1_Copy3" Content="Nuevo usuario:" HorizontalAlignment="Center" Margin="0,32,0,0" VerticalAlignment="Top" Foreground="#FF242227" Width="158" FontFamily="Gloss And Bloom" FontSize="18" FontStretch="UltraExpanded" FontWeight="Medium"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
