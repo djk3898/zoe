@@ -27,7 +27,7 @@ namespace Zoe.AccesDades
             {
                 connexio = new(stringConnexio);
                 connexio.Open();
-                MessageBox.Show("Connexio establerta");
+                //MessageBox.Show("Connexio establerta");
                 return connexio;
             }
             catch(Exception dbConnectionFail) {
