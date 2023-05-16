@@ -25,11 +25,5 @@ namespace Zoe
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //Command cmd = new();
-            //txtbox_Query.Text = cmd.Select(txtbox_Query.Text);
-        }
     }
 }
