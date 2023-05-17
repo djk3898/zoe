@@ -42,6 +42,28 @@ namespace Zoe
             Application.Current.Shutdown();
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e) { }
+        private void btnLogin_Click(object sender, RoutedEventArgs e) 
+        {
+            Command login = new();
+            string user = txtUser.Text;
+            string contra = txtPass.Password;
+
+            if (login.VerificaUsuari($"select nom, contrasenya from Usuari where nom = '{user}' and contrasenya = '{contra}'"))
+            {
+                if(login.VerificaRol($"select rol, nom, contrasenya from Usuari where nom = '{user}' and contrasenya = '{contra}'"))
+                {
+                    //obra finestra admin
+                    //AdminProva finestraAdmin = new();
+                    //finestraAdmin.WindowState = WindowState.Maximized;
+                    //finestraAdmin.Show();
+                    //tanca la finestra de login
+                    this.Close();
+                }
+                else
+                {
+                    //obra finestra client
+                }
+            }
+        }
     }
 }

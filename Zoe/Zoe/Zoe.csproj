@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <None Remove="image0.png" />
+    <None Remove="Imagenes\key-icon.png" />
+    <None Remove="Imagenes\usuario.png" />
     <None Remove="Sin título.png" />
   </ItemGroup>
 
@@ -18,7 +20,9 @@
 
   <ItemGroup>
     <Resource Include="Imagenes\image0.png" />
+    <Resource Include="Imagenes\key-icon.png" />
     <Resource Include="Imagenes\Sin título.png" />
+    <Resource Include="Imagenes\usuario.png" />
   </ItemGroup>
 
   <ItemGroup>
