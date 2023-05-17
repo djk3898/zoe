@@ -19,8 +19,8 @@
 
   <ItemGroup>
     <Resource Include="Imagenes\image0.png" />
-    <Resource Include="Imagenes\regalo.svg" />
     <Resource Include="Imagenes\Sin título.png" />
+    <Resource Include="Imagenes\usuario.png" />
   </ItemGroup>
 
   <ItemGroup>
