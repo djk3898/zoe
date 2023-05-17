@@ -22,15 +22,15 @@
             Opacity="0.95">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#462AD8" Offset="0"/>
-                    <GradientStop Color="#DA34AE" Offset="0.75"/>
-                    <GradientStop Color="#8A16C1" Offset="1"/>
+                    <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
+                    <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.75"/>
+                    <GradientStop Color="{StaticResource primaryBackColor1}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                    <GradientStop Color="#FFEBABAD" Offset="0"/>
-                    <GradientStop Color="#FF8AD8D3" Offset="1"/>
+                    <GradientStop Color="{StaticResource winBorderColor2}" Offset="0"/>
+                    <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
             <Grid>
@@ -119,7 +119,7 @@
                             Margin="288,25,288,10">
                     <Image Source="E:\M03\ZOE\Zoe\Zoe\Imagenes\image0.png"
                            Width="100" Height="100"/>
-                    <TextBlock Text="ZOE"
+                    <TextBlock Text="Z♡E"
                                Foreground="White"
                                FontSize="25"
                                FontWeight="Medium"
