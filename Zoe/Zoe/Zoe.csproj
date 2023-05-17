@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Clases\Imagenes\image0.png" />
-    <Resource Include="Clases\Imagenes\Sin título.png" />
+    <Resource Include="Imagenes\image0.png" />
+    <Resource Include="Imagenes\Sin título.png" />
   </ItemGroup>
 
   <ItemGroup>
