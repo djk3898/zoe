@@ -65,5 +65,13 @@ namespace Zoe
                 }
             }
         }
+
+        private void btnCrear_Click(object sender, RoutedEventArgs e)
+        {
+            //obra finestra registre
+
+            //tanca la finestra login
+            this.Close();
+        }
     }
 }
