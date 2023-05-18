@@ -41,21 +41,26 @@ namespace Zoe.AccesDades
         {
             //obrim la connexio
             c = new Connexio();
-            MySqlConnection connexio = c.Connectar();
-            //executem la query
-            cmd = new MySqlCommand(query, connexio);
-            MySqlDataReader dataReader = cmd.ExecuteReader();
-            //comprovem les dades
-            if (!(dataReader.Read()))
+            try
             {
-                MessageBox.Show("Usuari o contrasenya incorrectes");
-                resultatBool = false;
+                MySqlConnection connexio = c.Connectar();
+                //executem la query
+                cmd = new MySqlCommand(query, connexio);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                //comprovem les dades
+                if (!(dataReader.Read()))
+                {
+                    MessageBox.Show("Usuari o contrasenya incorrectes");
+                    resultatBool = false;
+                }
+                else resultatBool = true;
+                //tanquem la connexio
+                dataReader.Close();
+                connexio.Close();
+                return resultatBool;
             }
-            else resultatBool = true;
-            //tanquem la connexio
-            dataReader.Close();
-            connexio.Close();
-            return resultatBool;
+            catch (Exception ex)
+            { return false; }
         }
         public bool VerificaRol(string query)
         {

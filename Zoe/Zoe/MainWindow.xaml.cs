@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Zoe.AccesDades;
+using Zoe.Vistas;
 
 namespace Zoe
 {
@@ -53,9 +54,9 @@ namespace Zoe
                 if(login.VerificaRol($"select rol, nom, contrasenya from Usuari where nom = '{user}' and contrasenya = '{contra}'"))
                 {
                     //obra finestra admin
-                    //AdminProva finestraAdmin = new();
-                    //finestraAdmin.WindowState = WindowState.Maximized;
-                    //finestraAdmin.Show();
+                    AdminVista finestraAdmin = new();
+                    finestraAdmin.WindowState = WindowState.Maximized;
+                    finestraAdmin.Show();
                     //tanca la finestra de login
                     this.Close();
                 }
