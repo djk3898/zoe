@@ -12,7 +12,7 @@ namespace Zoe.AccesDades
     {
         //Atributs
         private MySqlConnection connexio;
-        private static string servidor = "192.168.4.112";
+        private static string servidor = "192.168.1.92";
         private static string port = "3306";
         private static string usuari = "zoe";
         private static string contra = "zoe";

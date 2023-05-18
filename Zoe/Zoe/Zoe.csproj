@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <None Remove="image0.png" />
+    <None Remove="Imagenes\home.svg" />
+    <None Remove="Imagenes\key-icon.png" />
     <None Remove="Imagenes\regalo.svg" />
     <None Remove="Sin título.png" />
   </ItemGroup>
@@ -18,7 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Imagenes\home.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Imagenes\image0.png" />
+    <Resource Include="Imagenes\key-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Imagenes\Sin título.png" />
     <Resource Include="Imagenes\usuario.png" />
   </ItemGroup>

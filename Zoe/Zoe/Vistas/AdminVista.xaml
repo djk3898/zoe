@@ -68,7 +68,12 @@
                 <!-- Botones para el menú-->
                 <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
                     <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
+                        <Image>
+                            <Image.Source>
+                                <BitmapImage UriSource="Imagenes/home.svg"/>
+                            </Image.Source>
+                        </Image>
+
                         <TextBlock Text="Productos" />
                     </StackPanel>
                 </RadioButton>
