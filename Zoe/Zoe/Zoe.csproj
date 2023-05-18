@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Gloss_And_Bloom.ttf" />
     <None Remove="image0.png" />
+    <None Remove="Imagenes\home.svg" />
     <None Remove="Imagenes\regalo.svg" />
     <None Remove="Sin título.png" />
   </ItemGroup>
@@ -18,13 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\Gloss_And_Bloom.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Imagenes\image0.png" />
     <Resource Include="Imagenes\Sin título.png" />
     <Resource Include="Imagenes\usuario.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Fonts\" />
   </ItemGroup>
 
 </Project>

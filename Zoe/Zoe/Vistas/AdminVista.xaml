@@ -10,7 +10,7 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
-<!-- Borders-->
+    <!-- Borders-->
     <Border CornerRadius="10"                    
             BorderThickness="1">
         <Border.BorderBrush>
@@ -38,6 +38,67 @@
                         <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
+                <StackPanel>
+
+                    <!--Logo-->
+                    <StackPanel Orientation="Horizontal"
+                                Height="35"
+                                Margin="15,25,0,40">
+
+                        <Image Source="/Imagenes/image0.png" Height="30"/>
+                        <TextBlock Text="Z♡E"
+                                   FontSize="20"
+                                   FontFamily="Montserrat"
+                                   FontWeight="Medium"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <!-- Botones para el menú-->
+                    <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource panelOverColor}" Margin="-5,0,0,5" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Imagenes/home.png" Stretch="None" Height="44" Width="44" />
+                            <TextBlock Text=" Inicio" Height="38" FontSize="22" FontFamily="Gloss And Bloom" Width="99" />
+                        </StackPanel>
+                    </RadioButton>
+                    
+                    <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource panelOverColor}" Margin="-5,0,0,5" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Imagenes/home.png" Stretch="None" Height="44" Width="44" />
+                            <TextBlock Text=" Inicio" Height="38" FontSize="22" FontFamily="Gloss And Bloom" Width="99" />
+                        </StackPanel>
+                    </RadioButton>
+                    
+                    <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource panelOverColor}" Margin="-5,0,0,5" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Imagenes/home.png" Stretch="None" Height="44" Width="44" />
+                            <TextBlock Text=" Inicio" Height="38" FontSize="22" FontFamily="Gloss And Bloom" Width="99" />
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource panelOverColor}" Margin="-5,0,0,5" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Imagenes/home.png" Stretch="None" Height="44" Width="44" />
+                            <TextBlock Text=" Inicio" Height="38" FontSize="22" FontFamily="Gloss And Bloom" Width="99" />
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource panelOverColor}" Margin="-5,0,0,5" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Imagenes/home.png" Stretch="None" Height="44" Width="44" />
+                            <TextBlock Text=" Inicio" Height="38" FontSize="22" FontFamily="Gloss And Bloom" Width="99" />
+                        </StackPanel>
+                    </RadioButton>
+
+                    <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource panelOverColor}" Margin="-5,0,0,5" Height="50">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Imagenes/home.png" Stretch="None" Height="44" Width="44" />
+                            <TextBlock Text=" Inicio" Height="38" FontSize="22" FontFamily="Gloss And Bloom" Width="99" />
+                        </StackPanel>
+                    </RadioButton>
+                    
+
+
+                </StackPanel>
             </Border>
             <!-- Sesión principal-->
             <Border CornerRadius="0,10,10,0"
@@ -49,60 +110,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <StackPanel>
 
-                <!--Logo-->
-                <StackPanel Orientation="Horizontal"
-                                Height="35"
-                                Margin="15,25,0,40">
-
-                    <Image Source="/Imagenes/image0.png" Height="30"/>
-                    <TextBlock Text="Z♡E"
-                                   Foreground="{StaticResource titleColor4}"
-                                   FontSize="20"
-                                   FontFamily="Montserrat"
-                                   FontWeight="Medium"
-                                   VerticalAlignment="Center"
-                                   Margin="10,0,0,0"/>
-                </StackPanel>
-                <!-- Botones para el menú-->
-                <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
-                        <TextBlock Text="Productos" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
-                        <TextBlock Text="Productos" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
-                        <TextBlock Text="Productos" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
-                        <TextBlock Text="Productos" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
-                        <TextBlock Text="Productos" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton Background="Transparent" BorderBrush="Transparent" Foreground="{StaticResource plainTextColor1}" Margin="-5,0,0,5" Height="50">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/Imagenes/home.png" Stretch="None" Height="33" Width="33" />
-                        <TextBlock Text="Productos" />
-                    </StackPanel>
-                </RadioButton>
-            </StackPanel>
 
 
         </Grid>

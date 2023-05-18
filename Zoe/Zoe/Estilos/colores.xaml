@@ -31,7 +31,7 @@
     <SolidColorBrush x:Key="plainTextColor2" Color="#7C80C2"/>
     <SolidColorBrush x:Key="plainTextColor3" Color="#7376BD"/>
     <!--Panel Colors-->
-    <SolidColorBrush x:Key="panelColor" Color="#200F53"/>
-    <SolidColorBrush x:Key="panelOverColor" Color="#281269"/>
+    <SolidColorBrush x:Key="panelColor" Color="#216062"/>
+    <SolidColorBrush x:Key="panelOverColor" Color="#2c828d"/>
     <SolidColorBrush x:Key="panelActiveColor" Color="#2B1372"/>
 </ResourceDictionary>
