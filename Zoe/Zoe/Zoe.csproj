@@ -21,9 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Imagenes\home.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Imagenes\image0.png" />
     <Resource Include="Imagenes\key-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

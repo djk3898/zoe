@@ -1,4 +1,4 @@
-﻿<Window x:Class="Zoe.MainWindow"
+﻿<Window x:Class="Zoe.Registrar"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,7 +14,7 @@
         MouseDown="Window_MouseDown">
     <Border CornerRadius="12">
         <Border.Background>
-            <ImageBrush ImageSource="Imagenes\Sin título.png"
+            <ImageBrush ImageSource="..\Imagenes\Sin título.png"
                         Stretch="None"/>
         </Border.Background>
         <Border CornerRadius="10"                    
@@ -45,7 +45,7 @@
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="LOG IN"
+                    <TextBlock Text="CREAR USUARIO"
                                Foreground="#FF131212"
                                FontSize="10"
                                FontFamily="Montserrat"
@@ -116,20 +116,16 @@
                 <StackPanel Width="220"
                             Grid.Row="1"
                             Orientation="Vertical"
-                            Margin="288,25,288,10">
-                    <Image Source="Imagenes\image0.png"
+                            Margin="288,0,288,10">
+                    <Image Source="..\Imagenes\image0.png"
                            Width="100" Height="100"/>
-                    <TextBlock Text="Z♡E"
-                               Foreground="White"
-                               FontSize="25"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                               HorizontalAlignment="Center"/>
                     <TextBlock Text="Usuario"
-                               Foreground="#FF100F0F"
-                               FontSize="12"
-                               FontFamily="Montserrat"                             
-                               Margin="0,35,0,0"/>
+                        Foreground="#FF0E0D0D"
+                        FontSize="12"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"
+                               Margin="0,5,0,0"
+                               />
                     <TextBox x:Name="txtUser"
                              FontSize="13"
                              FontWeight="Medium"
@@ -140,10 +136,9 @@
                              BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"
                              Padding="20,0,0,0">
                         <TextBox.Background>
-                            <ImageBrush ImageSource="Imagenes\usuario.png"
+                            <ImageBrush ImageSource="..\Imagenes\usuario.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </TextBox.Background>
@@ -152,8 +147,9 @@
                                Foreground="#FF0E0D0D"
                                FontSize="12"
                                FontWeight="Medium"
-                               FontFamily="Montserrat"                             
-                               Margin="0,15,0,0"/>
+                               FontFamily="Montserrat" 
+                               Margin="0,4,0,0"
+                               />
                     <PasswordBox x:Name="txtPass"
                              FontSize="13"
                              FontWeight="Medium"
@@ -164,25 +160,143 @@
                              BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"
                              Padding="20,0,0,0">
                         <PasswordBox.Background>
-                            <ImageBrush ImageSource="Imagenes\key-icon.png"
+                            <ImageBrush ImageSource="..\Imagenes\key-icon.png"
                                         Stretch="None"
                                         AlignmentX="Left"/>
                         </PasswordBox.Background>
                     </PasswordBox>
-                    <Button x:Name="btnLogin"                          
+                    <TextBlock Text="E-mail"
+                        Foreground="#FF0E0D0D"
+                        FontSize="12"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat" 
+                               Margin="0,4,0,0"                            
+                               />
+                    <TextBox x:Name="txtEmail"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"                            
+                        Foreground="#FF1B1818"
+                        CaretBrush="LightGray"
+                        BorderBrush="#FF232323"
+                        BorderThickness="0,0,0,2"
+                        Height="28"
+                        VerticalContentAlignment="Center"
+                        Padding="20,0,0,0">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="Teléfono"
+                        Foreground="#FF0E0D0D"
+                        FontSize="12"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"  
+                               Margin="0,4,0,0"                           
+                               />
+                    <TextBox x:Name="txtTelf"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"                            
+                        Foreground="#FF1B1818"
+                        CaretBrush="LightGray"
+                        BorderBrush="#FF232323"
+                        BorderThickness="0,0,0,2"
+                        Height="28"
+                        VerticalContentAlignment="Center"
+                        Padding="20,0,0,0">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="Provincia"
+                        Foreground="#FF0E0D0D"
+                        FontSize="12"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"        
+                               Margin="0,4,0,0"                     
+                               />
+                    <TextBox x:Name="txtProvincia"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"                            
+                        Foreground="#FF1B1818"
+                        CaretBrush="LightGray"
+                        BorderBrush="#FF232323"
+                        BorderThickness="0,0,0,2"
+                        Height="28"
+                        VerticalContentAlignment="Center"
+                        Padding="20,0,0,0">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="Dirección"
+                        Foreground="#FF0E0D0D"
+                        FontSize="12"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"   
+                               Margin="0,4,0,0"                          
+                               />
+                    <TextBox x:Name="txtDireccio"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"                            
+                        Foreground="#FF1B1818"
+                        CaretBrush="LightGray"
+                        BorderBrush="#FF232323"
+                        BorderThickness="0,0,0,2"
+                        Height="28"
+                        VerticalContentAlignment="Center"
+                        Padding="20,0,0,0">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="CP"
+                        Foreground="#FF0E0D0D"
+                        FontSize="12"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"    
+                               Margin="0,4,0,0"                         
+                               />
+                    <TextBox x:Name="txtCodiPostal"
+                        FontSize="13"
+                        FontWeight="Medium"
+                        FontFamily="Montserrat"                            
+                        Foreground="#FF1B1818"
+                        CaretBrush="LightGray"
+                        BorderBrush="#FF232323"
+                        BorderThickness="0,0,0,2"
+                        Height="28"
+                        VerticalContentAlignment="Center"
+                        Padding="20,0,0,0">
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                                Stretch="None"
+                                AlignmentX="Left"/>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Button x:Name="btnRegistrar"                          
                             BorderThickness="0"
-                            Content="LOG IN"
+                            Content="REGISTER"
                             Foreground="#FF0C0B0B"
                             FontSize="12"
                             FontFamily="Montserrat"
-                            Cursor="Hand"                           
-                            Margin="0,50,0,0"
-                            Click="btnLogin_Click">
+                            Cursor="Hand" Opacity="1" Height="80" Click="btnRegistrar_Click"                           
+                            >
                         <Button.Style>
-                            <Style TargetType="Button">
+                            <Style TargetType="{x:Type Button}">
                                 <Setter Property="Background" Value="#FF92C9C5"/>
                                 <!-- <Setter Property="Background" Value="#462AD8"/> -->
                                 <Style.Triggers>
@@ -193,7 +307,7 @@
                             </Style>
                         </Button.Style>
                         <Button.Template>
-                            <ControlTemplate TargetType="Button">
+                            <ControlTemplate TargetType="{x:Type Button}">
                                 <Border Width="150" Height="40"
                                         CornerRadius="20"
                                         Background="{TemplateBinding Background}">
@@ -203,59 +317,8 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <StackPanel Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Margin="0,15,0,0">
-                        <TextBlock Text="Sin usuario?"
-                               Foreground="#FF100F0F"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"/>
-                        <Button
-                            x:Name="btnCrear"
-                            Margin="8,0,0,0"
-                            Padding="-8,0,0,0" Click="btnCrear_Click">
-                            <Button.Style>
-                                <Style TargetType="Button">
-                                    <Setter Property="Background" Value="Transparent"/>
-                                    <Setter Property="BorderBrush" Value="Transparent"/>
-                                    <Setter Property="Template">
-                                        <Setter.Value>
-                                            <ControlTemplate TargetType="Button">
-                                                <Border Background="{TemplateBinding Background}"
-                                                        BorderBrush="{TemplateBinding BorderBrush}">
-                                                    <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
-                                                </Border>
-                                            </ControlTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Style>
-                            </Button.Style>
-
-
-                            <TextBlock Text="Crear"
-                               Foreground="White"
-                               FontSize="12"
-                               FontWeight="Bold"
-                               FontFamily="Montserrat"
-                               Cursor="Hand"
-                               Margin="8,0,0,0">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock">
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="TextDecorations" Value="Underline"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
-                        </Button>
-                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
-
     </Border>
 </Window>

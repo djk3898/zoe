@@ -70,7 +70,8 @@ namespace Zoe
         private void btnCrear_Click(object sender, RoutedEventArgs e)
         {
             //obra finestra registre
-
+            Registrar finestraNouUsuari = new();
+            finestraNouUsuari.Show();
             //tanca la finestra login
             this.Close();
         }
