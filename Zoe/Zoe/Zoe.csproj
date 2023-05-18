@@ -11,6 +11,10 @@
     <None Remove="Fonts\Gloss_And_Bloom.ttf" />
     <None Remove="image0.png" />
     <None Remove="Imagenes\home.svg" />
+<<<<<<< HEAD
+=======
+    <None Remove="Imagenes\key-icon.png" />
+>>>>>>> 7ed796f670704e096eefaccac42fc03b6a36c6e2
     <None Remove="Imagenes\regalo.svg" />
     <None Remove="Sin título.png" />
   </ItemGroup>
@@ -20,10 +24,17 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Resource Include="Fonts\Gloss_And_Bloom.ttf">
+=======
+    <Resource Include="Imagenes\home.svg">
+>>>>>>> 7ed796f670704e096eefaccac42fc03b6a36c6e2
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Imagenes\image0.png" />
+    <Resource Include="Imagenes\key-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Imagenes\Sin título.png" />
     <Resource Include="Imagenes\usuario.png" />
   </ItemGroup>
