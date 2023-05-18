@@ -6,6 +6,7 @@
     <Color x:Key="primaryBackColor2">#462AD8</Color>
     <Color x:Key="secondaryBackColor1">#DA34AE</Color>
     <Color x:Key="secondaryBackColor2">#210F55</Color>
+    <Color x:Key="secondaryBackColor3">#C62DAE</Color>
     <!--Window Border Colors-->
     <Color x:Key="winBorderColor1">#6D2FFF</Color>
     <Color x:Key="winBorderColor2">#FFEBABAD</Color>
@@ -25,6 +26,7 @@
     <SolidColorBrush x:Key="titleColor1" Color="#E0E1F1"/>
     <SolidColorBrush x:Key="titleColor2" Color="#D5CFF5"/>
     <SolidColorBrush x:Key="titleColor3" Color="#BCBEE0"/>
+    <SolidColorBrush x:Key="titleColor4" Color="Black"/>
     <SolidColorBrush x:Key="plainTextColor1" Color="#9497CD"/>
     <SolidColorBrush x:Key="plainTextColor2" Color="#7C80C2"/>
     <SolidColorBrush x:Key="plainTextColor3" Color="#7376BD"/>
