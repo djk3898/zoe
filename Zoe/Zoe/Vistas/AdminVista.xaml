@@ -10,23 +10,45 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
+<!-- Borders-->
+    <Border CornerRadius="10"                    
+            BorderThickness="1">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
+                <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.5"/>
+                <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <!--Menu de navegacion-->
-            <ColumnDefinition Width="250"/>
-            <!--Sesion para el contenido, tendra todas las opciones lateralmente por medio de botones-->
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <!--Menu navegación-->
-        <Border CornerRadius="10,0,0,10"
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <!--Menu de navegacion-->
+                <ColumnDefinition Width="250"/>
+                <!--Sesion para el contenido, tendra todas las opciones lateralmente por medio de botones-->
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Menu de navegación (principal)-->
+            <Border CornerRadius="10,0,0,10"
                     Grid.Column="0">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
-                    <GradientStop Color="{StaticResource winBorderColor2}" Offset="0"/>
-                    <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                        <GradientStop Color="{StaticResource winBorderColor2}" Offset="0"/>
+                        <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <!-- Sesión principal-->
+            <Border CornerRadius="0,10,10,0"
+                    Grid.Column="1">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                        <GradientStop Color="{StaticResource winBorderColor2}" Offset="0"/>
+                        <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
             <StackPanel>
 
                 <!--Logo-->
@@ -81,9 +103,10 @@
                     </StackPanel>
                 </RadioButton>
             </StackPanel>
-        </Border>
 
-    </Grid>
+
+        </Grid>
+    </Border>
 </Window>
  
     
