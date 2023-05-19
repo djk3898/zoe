@@ -186,7 +186,7 @@
                         VerticalContentAlignment="Center"
                         Padding="20,0,0,0">
                         <TextBox.Background>
-                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                            <ImageBrush ImageSource="/Imagenes/register/email.png"
                                 Stretch="None"
                                 AlignmentX="Left"/>
                         </TextBox.Background>
@@ -210,7 +210,7 @@
                         VerticalContentAlignment="Center"
                         Padding="20,0,0,0">
                         <TextBox.Background>
-                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                            <ImageBrush ImageSource="/Imagenes/register/mvl.png"
                                 Stretch="None"
                                 AlignmentX="Left"/>
                         </TextBox.Background>
@@ -234,7 +234,7 @@
                         VerticalContentAlignment="Center"
                         Padding="20,0,0,0">
                         <TextBox.Background>
-                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                            <ImageBrush ImageSource="/Imagenes/register/prov.png"
                                 Stretch="None"
                                 AlignmentX="Left"/>
                         </TextBox.Background>
@@ -258,7 +258,7 @@
                         VerticalContentAlignment="Center"
                         Padding="20,0,0,0">
                         <TextBox.Background>
-                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                            <ImageBrush ImageSource="/Imagenes/register/direc.png"
                                 Stretch="None"
                                 AlignmentX="Left"/>
                         </TextBox.Background>
@@ -282,7 +282,7 @@
                         VerticalContentAlignment="Center"
                         Padding="20,0,0,0">
                         <TextBox.Background>
-                            <ImageBrush ImageSource="/Imagenes/usuario.png"
+                            <ImageBrush ImageSource="/Imagenes/register/cp.png"
                                 Stretch="None"
                                 AlignmentX="Left"/>
                         </TextBox.Background>
