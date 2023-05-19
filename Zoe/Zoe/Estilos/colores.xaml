@@ -22,14 +22,7 @@
     <SolidColorBrush x:Key="color8" Color="#78A3FC"/>
     <SolidColorBrush x:Key="color9" Color="#07F3C0"/>
     <SolidColorBrush x:Key="color10" Color="#FBA1AA"/>
-    <!--Font Colors-->
-    <SolidColorBrush x:Key="titleColor1" Color="#E0E1F1"/>
-    <SolidColorBrush x:Key="titleColor2" Color="#D5CFF5"/>
-    <SolidColorBrush x:Key="titleColor3" Color="#BCBEE0"/>
-    <SolidColorBrush x:Key="titleColor4" Color="Black"/>
-    <SolidColorBrush x:Key="plainTextColor1" Color="#9497CD"/>
-    <SolidColorBrush x:Key="plainTextColor2" Color="#7C80C2"/>
-    <SolidColorBrush x:Key="plainTextColor3" Color="#7376BD"/>
+   
     <!--Panel Colors-->
     <SolidColorBrush x:Key="panelColor" Color="#216062"/>
     <SolidColorBrush x:Key="panelOverColor" Color="#2c828d"/>

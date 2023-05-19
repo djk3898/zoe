@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:Zoe"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="/Estilos/colores.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Estilos/colores.xaml"/>
+                <ResourceDictionary Source="/Estilos/Botones.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

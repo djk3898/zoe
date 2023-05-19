@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Fonts\Gloss_And_Bloom.ttf" />
+    <None Remove="Fuente\Gloss_And_Bloom.ttf" />
     <None Remove="image0.png" />
     <None Remove="Imagenes\home.svg" />
     <None Remove="Imagenes\key-icon.png" />
@@ -17,11 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
     <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Imagenes\home.svg">
+    <Resource Include="Fuente\Gloss_And_Bloom.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Imagenes\image0.png" />

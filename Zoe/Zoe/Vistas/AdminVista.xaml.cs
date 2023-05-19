@@ -10,18 +10,34 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zoe.AccesDades;
 
 namespace Zoe.Vistas
 {
-    /// <summary>
-    /// Lógica de interacción para AdminVista.xaml
-    /// </summary>
+    
     public partial class AdminVista : Window
     {
         public AdminVista()
         {
             InitializeComponent();
+            //Un error que detectamos es que cuando abriamos la pestaña principal ocupaba todo el espacio incluso la barra de tareas
+            //la solución mas acertada es definir/ limitar el espacio de trabajo de la ventana
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+        }
+
+        private void panelArrastraryMover(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
         }
     }
 }
