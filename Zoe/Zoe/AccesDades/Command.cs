@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
@@ -35,6 +37,30 @@ namespace Zoe.AccesDades
             dataReader.Close();
             connexio.Close();
             return resultatString;
+        }
+        public bool VerificarEmail(string email)
+        {
+            string pattern = @"^[\w\.-]+@[\w\.-]+\.\w+$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(email);
+        }
+        public bool VerificarTelf(string telf)
+        {
+            string pattern = @"^(?:\d{3}\d{2}\d{2}\d{2})$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(telf);
+        }
+        public bool VerificarCP(string cp)
+        {
+            string pattern = @"^(0[1-9]|[1-4]\d|5[0-2])\d{3}$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(cp);
+        }
+        public bool VerificarContra(string contra)
+        {
+            string pattern = @"^(?=.*[A-Za-z])(?=.*\d).{8,}$";
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(contra);
         }
 
         public bool VerificaUsuari(string query)
@@ -81,6 +107,34 @@ namespace Zoe.AccesDades
             dataReader.Close();
             connexio.Close();
             return resultatBool;
+        }
+
+        public bool CrearUsuari(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            try
+            {
+                int rowsAffected = cmd.ExecuteNonQuery();
+                connexio.Close();
+                MessageBox.Show("Usuari creat!");
+                return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException dadesDuplicades)
+            {
+                MessageBox.Show("Aquest usuari ja existeix");
+                connexio.Close();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                connexio.Close();
+                return false;
+            }
         }
     }
 }

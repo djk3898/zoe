@@ -14,6 +14,12 @@
     <None Remove="Imagenes\home.svg" />
     <None Remove="Imagenes\key-icon.png" />
     <None Remove="Imagenes\regalo.svg" />
+    <None Remove="Imagenes\register\correo.png" />
+    <None Remove="Imagenes\register\cp.png" />
+    <None Remove="Imagenes\register\direc.png" />
+    <None Remove="Imagenes\register\email.png" />
+    <None Remove="Imagenes\register\mvl.png" />
+    <None Remove="Imagenes\register\prov.png" />
     <None Remove="Sin título.png" />
   </ItemGroup>
 
@@ -23,13 +29,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fuente\Gloss_And_Bloom.ttf">
+    <Resource Include="Imagenes\home.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Imagenes\image0.png" />
     <Resource Include="Imagenes\key-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Imagenes\register\cp.png" />
+    <Resource Include="Imagenes\register\direc.png" />
+    <Resource Include="Imagenes\register\email.png" />
+    <Resource Include="Imagenes\register\mvl.png" />
+    <Resource Include="Imagenes\register\prov.png" />
     <Resource Include="Imagenes\Sin título.png" />
     <Resource Include="Imagenes\usuario.png" />
   </ItemGroup>
