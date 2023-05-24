@@ -39,5 +39,11 @@ namespace Zoe.Vistas
         {
             WindowState = WindowState.Minimized;
         }
+        private void btnMaximizar_Click(object sender, RoutedEventArgs e)
+        {
+            if (WindowState == WindowState.Normal)
+                WindowState = WindowState.Maximized;
+            else WindowState = WindowState.Normal;
+        }
     }
 }
