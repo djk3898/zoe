@@ -7,9 +7,9 @@ using Zoe.Vistas;
 
 namespace Zoe.Clases.Negoci
 {
-    public class Añadir:AdminVista
+    internal class Producto:AdminVista
     {
-        public Añadir()
+        public Producto()
         {
             InitializeComponent();
         }

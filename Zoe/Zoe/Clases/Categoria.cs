@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Zoe.Vistas;
 
-namespace Zoe.Clases.Negoci
+namespace Zoe.Clases
 {
-    public class Añadir:AdminVista
+    internal class Categoria:AdminVista
     {
-        public Añadir()
+        public Categoria()
         {
             InitializeComponent();
         }

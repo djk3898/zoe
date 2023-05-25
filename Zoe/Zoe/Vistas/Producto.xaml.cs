@@ -18,9 +18,9 @@ namespace Zoe.Vistas
     /// <summary>
     /// Lógica de interacción para Productos.xaml
     /// </summary>
-    public partial class Productos : UserControl
+    public partial class Producto : UserControl
     {
-        public Productos()
+        public Producto()
         {
             InitializeComponent();
         }

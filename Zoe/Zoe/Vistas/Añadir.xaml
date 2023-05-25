@@ -5,8 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Zoe.Vistas"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="Transparent">
+    <Grid Name="GridInicio">
+        <Border CornerRadius="0,10,10,0"
+                    Grid.Column="1">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="{StaticResource winBorderColor1}" Offset="0"/>
+                    <GradientStop Color="{StaticResource winBorderColor2}" Offset="0.5"/>
+                    <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                    <GradientStop Color="{DynamicResource winBorderColor2}" Offset="0"/>
+                    <GradientStop Color="{DynamicResource winBorderColor3}" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+        </Border>
     </Grid>
 </UserControl>

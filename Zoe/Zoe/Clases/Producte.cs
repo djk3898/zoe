@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using Zoe.Vistas;
 
 namespace Zoe
 {
@@ -43,7 +44,7 @@ namespace Zoe
             get { return estoc; }
             set { estoc = value; }
         }
-
+        
         public Producte(int id, string n, string p)
         {
             this.id = id;

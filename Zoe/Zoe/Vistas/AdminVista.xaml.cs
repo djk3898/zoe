@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Zoe.AccesDades;
+using Zoe.Clases.Negoci;
+using Zoe.Vistas;
 
 namespace Zoe.Vistas
 {
@@ -44,6 +46,60 @@ namespace Zoe.Vistas
             if (WindowState == WindowState.Normal)
                 WindowState = WindowState.Maximized;
             else WindowState = WindowState.Normal;
+        }
+
+        private void Inicio_click(object sender, RoutedEventArgs e)
+        {
+            Inicio ini = new Inicio();
+            grid.Children.Add(ini);
+            grid.Visibility = Visibility.Visible;
+        }
+
+        private void modificar_click(object sender, RoutedEventArgs e)
+        {
+            Modificar modi = new Modificar();
+            grid.Children.Add(modi);
+            grid.Visibility = Visibility.Visible;
+        }
+
+        private void Productos_click(object sender, RoutedEventArgs e)
+        {
+            Producto prod = new Producto();
+            grid.Children.Add(prod);
+            grid.Visibility = Visibility.Visible;
+
+        }
+
+        private void Categoria_click(object sender, RoutedEventArgs e)
+        {
+            categoria catg = new categoria();
+            grid.Children.Add(catg);
+            grid.Visibility = Visibility.Visible;
+
+        }
+
+        private void Añadir_click(object sender, RoutedEventArgs e)
+        {
+            Añadir añadir = new Añadir();
+            grid.Children.Add(añadir);
+            grid.Visibility = Visibility.Visible;
+
+        }
+
+        private void Eliminar_click(object sender, RoutedEventArgs e)
+        {
+            Eliminar eliminar = new Eliminar();
+            grid.Children.Add(eliminar);
+            grid.Visibility = Visibility.Visible;
+
+        }
+
+        private void Pedido_click(object sender, RoutedEventArgs e)
+        {
+            Pedido pedido = new Pedido();
+            grid.Children.Add(pedido);
+            grid.Visibility = Visibility.Visible;
+
         }
     }
 }

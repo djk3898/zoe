@@ -11,7 +11,12 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True">
-
+    <Window.Resources>
+        <DataTemplate x:Name="Inicio"
+                  DataType="{x:Type local:Inicio}">
+        <local:Inicio DataContext="{Binding}"/>
+    </DataTemplate>
+    </Window.Resources>
 
     <!-- Bordes-->
     <Border CornerRadius="10"                    
@@ -59,10 +64,10 @@
                     </StackPanel>
                     <!-- Botones para el menú-->
 
-                    <RadioButton Style="{StaticResource bttMenu}"
+                    <RadioButton x:Name="radioBttInicio" Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 IsChecked="True" Click="Inicio_click"
+                                  >
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Home" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Inicio" Style="{StaticResource bttMenuTxt}"/>
@@ -72,7 +77,7 @@
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
                                  IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 Click="Productos_click">
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Gift" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Productos" Style="{StaticResource bttMenuTxt}"/>
@@ -82,7 +87,7 @@
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
                                  IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 Click="Categoria_click">
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Bars" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Categoría" Style="{StaticResource bttMenuTxt}"/>
@@ -94,7 +99,7 @@
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
                                  IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 Click="Añadir_click">
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Add" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Añadir" Style="{StaticResource bttMenuTxt}"/>
@@ -104,7 +109,7 @@
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
                                  IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 Click="modificar_click">
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Edit" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Modificar" Style="{StaticResource bttMenuTxt}"/>
@@ -113,8 +118,8 @@
 
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 IsChecked="True" Click="Eliminar_click"
+                                 >
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="DeleteLeft" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Eliminar" Style="{StaticResource bttMenuTxt}"/>
@@ -124,8 +129,8 @@
 
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
-                                 IsChecked="True"
-                                 Command="{Binding ShowHomeViewCommand}">
+                                 IsChecked="True" Click="Pedido_click"
+                                 >
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Shop" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Pedidos" Style="{StaticResource bttMenuTxt}"/>
@@ -142,12 +147,13 @@
                         <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <Grid>
+                <Grid> 
                     <Grid.RowDefinitions>
                         <!--para cerrar, minimizar y maximizar-->
                         <RowDefinition Height="20"/>
                         <!--Encabezado sesion de contenido-->
                         <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <StackPanel x:Name="panelControl"
@@ -256,12 +262,12 @@
                         <StackPanel 
                                     Orientation="Horizontal"
                                     VerticalAlignment="Center">
-                            <fon:IconImage Icon="Car"
+                            <fon:IconImage Icon="{Binding Icon}"
                                            Height="20"
                                            Width="20"
                                            Margin="30,0,10,0"
                                            Foreground="{StaticResource panelOverColor}"/>
-                            <TextBlock Text="Sesión principal"
+                            <TextBlock Text="{Binding Caption}"
                                        Foreground="{StaticResource panelOverColor }"
                                        FontSize="20"/>
                         </StackPanel>
@@ -283,11 +289,13 @@
                             <Image Height="35" Width="350" Source="/Imagenes/usuario1.png"/>
                         </StackPanel>
                     </Grid>
-                    <ContentControl
+                    <Grid Grid.Row="2"
+                          x:Name="grid">
+                        <ContentControl x:Name="Contenido"
                         Grid.Row="2"
-                        Margin="25"/>
+                        Margin="10,10,0,10"/>
+                    </Grid>
                 </Grid>
-
             </Border>
         </Grid>
     </Border>
