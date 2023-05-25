@@ -23,7 +23,7 @@
                     <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Calendar/>
+            <DataGrid Background="Transparent" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalGridLinesBrush="#FF9ECFCB" Margin="28,36,28,36" VerticalGridLinesBrush="#FF9DCFCC" AlternatingRowBackground="#FF1F1F1F" BorderBrush="{x:Null}"/>
 
         </Border>
     </Grid>
