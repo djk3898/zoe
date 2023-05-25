@@ -43,7 +43,7 @@ namespace Zoe
         {
             get { return telf; }
         }
-
+        public Usuari() { }
         public Usuari(string r, string n, string c)
         {
             rol = r;
