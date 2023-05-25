@@ -21,12 +21,14 @@ namespace Zoe.Vistas
     
     public partial class AdminVista : Window
     {
-        public AdminVista()
+        private Usuari admin;
+        public AdminVista(Usuari admin)
         {
             InitializeComponent();
             //Un error que detectamos es que cuando abriamos la pestaña principal ocupaba todo el espacio incluso la barra de tareas
             //la solución mas acertada es definir/ limitar el espacio de trabajo de la ventana
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            this.admin = admin;
         }
 
         private void panelArrastraryMover(object sender, MouseButtonEventArgs e)
