@@ -196,7 +196,7 @@
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMaximizar_Click">
-                            <fon:IconImage Icon="WindowMaximize" />
+                            <fon:IconImage Icon="WindowMaximize" Height="13" Width="14" />
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="#28AEED"/>

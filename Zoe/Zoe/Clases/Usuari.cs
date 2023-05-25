@@ -49,6 +49,7 @@ namespace Zoe
             rol = r;
             nom = n;
             contra = c;
+            
         }
         public Usuari(string r, string n, string c, string e, string p, string d, int cp, int t) : this(r, n, c)
         {

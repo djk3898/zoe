@@ -63,18 +63,18 @@ namespace Zoe
                 //verifica que la contrasenya no és feble
                 if(register.VerificarContra(contra))
                 {
-                    if (register.CrearUsuari($"insert into Usuari (rol, nom, contrasenya, email, telefon, provincia, direccio, cpostal) " +
+                    if (register.Afegir($"insert into Usuari (rol, nom, contrasenya, email, telefon, provincia, direccio, cpostal) " +
                         $"values(2, '{user}', '{contra}', '{email}', {telf}, '{prov}', '{direc}', {cp});"))
                     {
-                        //obra finestra admin
+                        //obra finestra login
                         MainWindow finestraLogin = new();
                         finestraLogin.Show();
-                        //tanca la finestra de login
+                        //tanca la finestra de registrar
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Hi ha hagut algun problema a l'hora de crear l'usuari.");
+                        MessageBox.Show("Ha habido algun problema durante la creación del usuario");
                     }
                 }
                 else
@@ -83,7 +83,7 @@ namespace Zoe
                 }
             }
             else {
-                MessageBox.Show("Algun camp està buit o en un format incorrecte");
+                MessageBox.Show("Algun campo esta vacío o en un formato incorrecto");
             }
             
         }

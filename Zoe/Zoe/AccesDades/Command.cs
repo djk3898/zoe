@@ -16,9 +16,12 @@ namespace Zoe.AccesDades
         private MySqlCommand cmd;
         private Connexio c;
         private string resultatString;
+        private int resultatInt;
+        private double resultatDouble;
         private bool resultatBool;
-
-        private string Select(string query)
+        
+        //SELECT
+        public string SelectString(string query)
         {
             //obrim la connexio
             c = new Connexio();
@@ -29,15 +32,54 @@ namespace Zoe.AccesDades
             //comprovem les dades
             while (dataReader.Read())
             {
-                int id = dataReader.GetInt32(0);
-                resultatString += id.ToString();
-                resultatString += "; " + dataReader.GetString(1);
+                string dada = dataReader.GetString(0);
+                resultatString = dada;
             }
             //tanquem la connexio
             dataReader.Close();
             connexio.Close();
             return resultatString;
         }
+        public int SelectInt(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            //comprovem les dades
+            while (dataReader.Read())
+            {
+                int dada = dataReader.GetInt32(0);
+                resultatInt = dada;
+            }
+            //tanquem la connexio
+            dataReader.Close();
+            connexio.Close();
+            return resultatInt;
+        }
+        public int SelectDouble(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            //comprovem les dades
+            while (dataReader.Read())
+            {
+                double dada = dataReader.GetDouble(0);
+                resultatDouble = dada;
+            }
+            //tanquem la connexio
+            dataReader.Close();
+            connexio.Close();
+            return resultatInt;
+        }
+
+        //USUARIS
         public bool VerificarEmail(string email)
         {
             string pattern = @"^[\w\.-]+@[\w\.-]+\.\w+$";
@@ -109,7 +151,9 @@ namespace Zoe.AccesDades
             return resultatBool;
         }
 
-        public bool CrearUsuari(string query)
+
+
+        public bool Afegir(string query)
         {
             //obrim la connexio
             c = new Connexio();
@@ -120,14 +164,36 @@ namespace Zoe.AccesDades
             {
                 int rowsAffected = cmd.ExecuteNonQuery();
                 connexio.Close();
-                MessageBox.Show("Usuari creat!");
+                MessageBox.Show("Creado!");
                 return true;
             }
             catch (MySql.Data.MySqlClient.MySqlException dadesDuplicades)
             {
-                MessageBox.Show("Aquest usuari ja existeix");
+                MessageBox.Show("Ya existe!");
                 connexio.Close();
                 return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                connexio.Close();
+                return false;
+            }
+        }
+
+        public bool Eliminar(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            try
+            {
+                int rowsAffected = cmd.ExecuteNonQuery();
+                connexio.Close();
+                MessageBox.Show("Eliminado!");
+                return true;
             }
             catch (Exception ex)
             {

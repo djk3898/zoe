@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
@@ -38,22 +39,27 @@ namespace Zoe
                     MessageBox.Show("La descripció ha de ser de 150 caràcters màxim.");
             }
         }
+        public double Preu
+        {
+            get { return preu; }
+        }
         public int Estoc
         {
             get { return estoc; }
             set { estoc = value; }
         }
-
-        public Producte(int id, string n, string p)
+        public Producte(int id, string nom, string descripcio, double preu, int estoc, string categoria, string proveidor)
         {
             this.id = id;
-            nom = n;
-            proveidor = p;
+            this.nom = nom;
+            if (descripcio.Length < 151)
+                this.descripcio = descripcio;
+            else
+                MessageBox.Show("La descripción tiene que ser de 150 carácteres como máximo.");
+            this.preu = preu;
+            this.estoc = estoc;
+            this.categoria = categoria;
+            this.proveidor = proveidor;
         }
-        public Producte(int id, string n, string p, string d) : this(id, n, p)
-        {
-            descripcio = d;
-        }
-        //pess
     }
 }

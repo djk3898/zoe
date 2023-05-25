@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Zoe.Clases.Negoci
 {
@@ -11,7 +9,7 @@ namespace Zoe.Clases.Negoci
         private DateTime data;
         private List<Pack> packs;
         private Usuari comprador;
-        private double total;
+        private double preuTotal;
 
         public Pack Pack
         {
@@ -29,22 +27,50 @@ namespace Zoe.Clases.Negoci
             }
         }
 
-        public Comanda(DateTime d, List<Pack> p, Usuari u)
+        public Comanda(List<Pack> p, Usuari u)
         {
-            data = d;
+            numComanda = GenerarNumComanda();
+            data = DateTime.Today;
             packs = p;
             comprador = u;
-            numComanda = GenerarNumComanda();
+            PreuTotal();
         }
 
         private int GenerarNumComanda()
         {
             return Convert.ToInt32(data) + comprador.Id;
         }
-        public string GenerarFactura()
+        public void AfegirCarrito(Pack p)
         {
-            return "";
+            packs.Add(p);
+            PreuTotal();
+            data = DateTime.Today;
         }
-        public string ToString() { return ""; }
+        private void PreuTotal()
+        {
+            preuTotal = 0;
+            foreach (Pack pack in packs)
+            {
+                preuTotal += pack.Preu;
+            }
+        }
+        //public string GenerarFactura()
+        public string ToString() 
+        {
+            string factura;
+
+            factura = $"************************************************\n";
+            factura += $"\tZOE\n";
+            factura += $"Usuari:{comprador}\tData: {data}\nNº comanda: {numComanda}\n";
+            factura += $"************************************************\n";
+            foreach (Pack pack in packs)
+            {
+                factura += $"{Pack.Nom}................................{Pack.Preu}\n{Pack.Descripcio}\n";
+            }
+            factura += "*************************************************\n";
+            factura += $"TOTAL................................{preuTotal}\n";
+            factura += "*************************************************";
+            return factura;
+        }
     }
 }
