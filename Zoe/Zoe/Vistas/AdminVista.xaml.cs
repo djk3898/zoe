@@ -70,7 +70,7 @@ namespace Zoe.Vistas
             Producto prod = new Producto();
             grid.Children.Add(prod);
             grid.Visibility = Visibility.Visible;
-
+            
         }
 
         private void Categoria_click(object sender, RoutedEventArgs e)
