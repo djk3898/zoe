@@ -21,10 +21,23 @@ namespace Zoe.Vistas
     /// </summary>
     public partial class Categoria : UserControl
     {
+        Botiga botiga = new Botiga();
         public Categoria()
         {
             InitializeComponent();
-            Botiga botiga = new Botiga();
+            dataGridCategories.ItemsSource = botiga.Categories;
+        }
+        private void btnAfegir_Click(object sender, RoutedEventArgs e)
+        {
+            botiga.AfegirCategoria(txtBox_Nom.Text);
+            dataGridCategories.ItemsSource = null;
+            dataGridCategories.ItemsSource = botiga.Categories;
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            botiga.EliminarCategoria(txtBox_Nom.Text);
+            dataGridCategories.ItemsSource = null;
             dataGridCategories.ItemsSource = botiga.Categories;
         }
     }

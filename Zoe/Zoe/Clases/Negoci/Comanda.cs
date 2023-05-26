@@ -91,19 +91,19 @@ namespace Zoe.Clases.Negoci
                 preuTotal += pack.Preu;
             }
         }
-        public void GenerarFactura()  //amb aquest metode guardem la comanda a la bbdd, perque la pugui veure l'admin
+        public void GenerarFactura()  //amb aquest metode guardem la comanda a la bbdd perque la pugui veure l'admin, i a més actualitzem l'estoc de productes
         {
             Command cmd = new Command();
             string packsLlista = "", productesLlista = "";
             foreach (Pack pack in packs)
             {
-                packsLlista += pack.Nom;
+                packsLlista += pack.Nom + ", ";
                 foreach (Producte p in pack.Productes.Keys)
                 {
-                    productesLlista += p.Nom;
+                    productesLlista += p.Nom + ", ";
                 }
             }
-            cmd.GuardarComanda($"insert into Comanda values({numComanda}, {comprador.Id}, {data.ToString("yyyy-mm-dd hh-mm-ss")}, {Convert.ToDecimal(preuTotal)}, '{packsLlista}', '{productesLlista}')");
+            cmd.GuardarComanda($"insert into Comanda values({numComanda}, {comprador.Id}, {data.ToString("yyyy-mm-dd hh-mm-ss")}, {Convert.ToDecimal(preuTotal)}, '{packsLlista}', '{productesLlista}');");
         }
 
         public string ToString() //amb aquest metode el client pot visualitzar la comanda

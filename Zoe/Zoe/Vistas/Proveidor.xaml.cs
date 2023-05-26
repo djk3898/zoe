@@ -21,10 +21,24 @@ namespace Zoe.Vistas
     /// </summary>
     public partial class Proveidor : UserControl
     {
+        Botiga botiga = new Botiga();
         public Proveidor()
         {
             InitializeComponent();
-            Botiga botiga = new Botiga();
+            dataGridProveidors.ItemsSource = botiga.Proveidors;
+        }
+
+        private void btnAfegir_Click(object sender, RoutedEventArgs e)
+        {
+            botiga.AfegirProveidor(txtBox_Nom.Text);
+            dataGridProveidors.ItemsSource = null;
+            dataGridProveidors.ItemsSource = botiga.Proveidors;
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            botiga.EliminarProveidor(txtBox_Nom.Text);
+            dataGridProveidors.ItemsSource = null;
             dataGridProveidors.ItemsSource = botiga.Proveidors;
         }
     }

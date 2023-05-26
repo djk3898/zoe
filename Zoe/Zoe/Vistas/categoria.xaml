@@ -31,6 +31,13 @@
                         <DataGridTextColumn Header="Categories" Binding="{Binding}" />
                     </DataGrid.Columns>
                 </DataGrid>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txtBox_Nom" TextWrapping="Wrap" Text="" Width="200" Margin="10"/>
+                    <Button x:Name="btnAfegir" Content="Afegir" Width="100" Margin="10" Click="btnAfegir_Click"/>
+                    <Button x:Name="btnEliminar" Content="Eliminar" Width="100" Margin="10" Click="btnEliminar_Click"/>
+                </StackPanel>
+
             </StackPanel>
 
         </Border>

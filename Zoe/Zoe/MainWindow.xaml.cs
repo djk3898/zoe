@@ -74,7 +74,8 @@ namespace Zoe
                     ClienteVista finestraClient = new();
                     finestraClient.WindowState = WindowState.Maximized;
                     finestraClient.Show();
-
+                    //tanca aquesta finestra
+                    this.Close();
                 }
             }
         }

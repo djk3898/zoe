@@ -239,5 +239,27 @@ namespace Zoe.AccesDades
                 return false;
             }
         }
+
+        public bool Modificar(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            try
+            {
+                int rowsAffected = cmd.ExecuteNonQuery();
+                connexio.Close();
+                MessageBox.Show("Modificado!");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                connexio.Close();
+                return false;
+            }
+        }
     }
 }

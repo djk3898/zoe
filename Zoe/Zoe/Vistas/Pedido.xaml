@@ -26,7 +26,16 @@
 
             <StackPanel Orientation="Vertical" Margin="20, 10, 10, 20">
                 <TextBlock Text="Pedidos" FontWeight="Bold" Margin="0,20,0,20"/>
-                <DataGrid x:Name="dataGridComandes" ItemsSource="{Binding Comandes}" AutoGenerateColumns="True" Margin="0,20,10,10"/>
+                <DataGrid x:Name="dataGridComandes" ItemsSource="{Binding Comandes}" AutoGenerateColumns="False" Margin="0,20,10,10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Número Comanda" Binding="{Binding NumComanda}" />
+                        <DataGridTextColumn Header="ID Comprador" Binding="{Binding IdComprador}" />
+                        <DataGridTextColumn Header="Fecha y Hora" Binding="{Binding Data}" />
+                        <DataGridTextColumn Header="Packs" Binding="{Binding Packs}" />
+                        <DataGridTextColumn Header="Productos" Binding="{Binding Productes}" />
+                        <DataGridTextColumn Header="Precio Total (€)" Binding="{Binding Total}" />
+                    </DataGrid.Columns>
+                </DataGrid>
 
             </StackPanel>
 
