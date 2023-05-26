@@ -63,12 +63,13 @@ namespace Zoe
                 }
                 else
                 {
+                    int id = login.SelectInt($"select id from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     string email = login.SelectString($"select email from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     string provincia = login.SelectString($"select provincia from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     string direccio = login.SelectString($"select direccio from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     int cp = login.SelectInt($"select cpostal from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     int telef = login.SelectInt($"select telefon from Usuari where nom = '{user}' and contrasenya = '{contra}'");
-                    usuari = new("client", user, contra, email, provincia, direccio, cp, telef);
+                    usuari = new(id, "client", user, contra, email, provincia, direccio, cp, telef);
                     //obra finestra client
                     ClienteVista finestraClient = new();
                     finestraClient.WindowState = WindowState.Maximized;
