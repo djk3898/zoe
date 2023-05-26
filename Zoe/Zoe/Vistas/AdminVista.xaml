@@ -278,7 +278,7 @@
                                     FlowDirection="RightToLeft"
                                     Margin="0,0,30,0">
 
-                            <TextBlock Text="{Binding usuari.DisplayName}"
+                            <TextBlock Text=""
                                        Foreground="{StaticResource panelOverColor }"
                                        FontSize="20"/>
                             <fon:IconImage Icon="Heart"
