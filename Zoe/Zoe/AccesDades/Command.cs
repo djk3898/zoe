@@ -19,6 +19,7 @@ namespace Zoe.AccesDades
         private int resultatInt;
         private double resultatDouble;
         private bool resultatBool;
+        private DateTime resultatDate;
         
         //SELECT
         public string SelectString(string query)
@@ -59,7 +60,7 @@ namespace Zoe.AccesDades
             connexio.Close();
             return resultatInt;
         }
-        public int SelectDouble(string query)
+        public double SelectDouble(string query)
         {
             //obrim la connexio
             c = new Connexio();
@@ -70,13 +71,32 @@ namespace Zoe.AccesDades
             //comprovem les dades
             while (dataReader.Read())
             {
-                double dada = dataReader.GetDouble(0);
+                double dada = Convert.ToDouble(dataReader.GetDecimal(0).ToString("0.00"));
                 resultatDouble = dada;
             }
             //tanquem la connexio
             dataReader.Close();
             connexio.Close();
-            return resultatInt;
+            return resultatDouble;
+        }
+        public DateTime SelectDate(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            //comprovem les dades
+            while (dataReader.Read())
+            {
+                DateTime dada = dataReader.GetDateTime(0);
+                resultatDate = dada;
+            }
+            //tanquem la connexio
+            dataReader.Close();
+            connexio.Close();
+            return resultatDate;
         }
 
         //USUARIS
@@ -151,7 +171,24 @@ namespace Zoe.AccesDades
             return resultatBool;
         }
 
-
+        public void GuardarComanda(string query)
+        {
+            //obrim la connexio
+            c = new Connexio();
+            MySqlConnection connexio = c.Connectar();
+            //executem la query
+            cmd = new MySqlCommand(query, connexio);
+            try
+            {
+                int rowsAffected = cmd.ExecuteNonQuery();
+                connexio.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+                connexio.Close();
+            }
+        }
 
         public bool Afegir(string query)
         {

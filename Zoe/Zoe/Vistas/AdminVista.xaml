@@ -12,10 +12,10 @@
         Background="Transparent"
         AllowsTransparency="True">
     <Window.Resources>
-        <DataTemplate x:Name="Inicio"
-                  DataType="{x:Type local:Inicio}">
-        <local:Inicio DataContext="{Binding}"/>
-    </DataTemplate>
+        <DataTemplate x:Name="Productos"
+                  DataType="{x:Type local:Producto}">
+            <local:Producto DataContext="{Binding}"/>
+        </DataTemplate>
     </Window.Resources>
 
     <!-- Bordes-->
@@ -64,16 +64,6 @@
                     </StackPanel>
                     <!-- Botones para el menú-->
 
-                    <RadioButton x:Name="radioBttInicio" Style="{StaticResource bttMenu}"
-                                 Tag="{StaticResource panelOverColor}"
-                                 IsChecked="True" Click="Inicio_click"
-                                  >
-                        <StackPanel Orientation="Horizontal">
-                            <fon:IconImage Icon="Home" Style="{StaticResource bttMenuIcono}"/>
-                            <TextBlock Text="Inicio" Style="{StaticResource bttMenuTxt}"/>
-                        </StackPanel>
-                    </RadioButton>
-
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
                                  IsChecked="True"
@@ -83,6 +73,16 @@
                             <TextBlock Text="Productos" Style="{StaticResource bttMenuTxt}"/>
                         </StackPanel>
                     </RadioButton>
+                    
+                    <RadioButton x:Name="radioBttInicio" Style="{StaticResource bttMenu}"
+                                 Tag="{StaticResource panelOverColor}"
+                                 IsChecked="True" Click="Proveidor_click"
+                                  >
+                        <StackPanel Orientation="Horizontal">
+                            <fon:IconImage Icon="Shop" Style="{StaticResource bttMenuIcono}"/>
+                            <TextBlock Text="Proveedores" Style="{StaticResource bttMenuTxt}"/>
+                        </StackPanel>
+                    </RadioButton>
 
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
@@ -90,7 +90,7 @@
                                  Click="Categoria_click">
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Bars" Style="{StaticResource bttMenuIcono}"/>
-                            <TextBlock Text="Categoría" Style="{StaticResource bttMenuTxt}"/>
+                            <TextBlock Text="Categorías" Style="{StaticResource bttMenuTxt}"/>
                         </StackPanel>
                     </RadioButton>
 
@@ -132,7 +132,7 @@
                                  IsChecked="True" Click="Pedido_click"
                                  >
                         <StackPanel Orientation="Horizontal">
-                            <fon:IconImage Icon="Shop" Style="{StaticResource bttMenuIcono}"/>
+                            <fon:IconImage Icon="CashRegister" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Pedidos" Style="{StaticResource bttMenuTxt}"/>
                         </StackPanel>
                     </RadioButton>
@@ -147,7 +147,7 @@
                         <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <Grid> 
+                <Grid>
                     <Grid.RowDefinitions>
                         <!--para cerrar, minimizar y maximizar-->
                         <RowDefinition Height="20"/>
@@ -202,7 +202,7 @@
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMaximizar_Click">
-                            <fon:IconImage Icon="WindowMaximize" Height="13" Width="14" />
+                            <fon:IconImage Icon="WindowMaximize" Height="12" Width="12" Foreground="White"/>
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Background" Value="#28AEED"/>

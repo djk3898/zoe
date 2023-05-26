@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zoe.Negoci;
 
 namespace Zoe.Vistas
 {
@@ -23,6 +24,8 @@ namespace Zoe.Vistas
         public Pedido()
         {
             InitializeComponent();
+            Botiga botiga = new Botiga();
+            dataGridComandes.ItemsSource = botiga.Comandes;
         }
     }
 }

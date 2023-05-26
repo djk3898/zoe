@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Zoe.AccesDades;
 using Zoe.Clases.Negoci;
 using Zoe.Vistas;
+using Zoe.Negoci;
 
 namespace Zoe.Vistas
 {
@@ -50,9 +51,9 @@ namespace Zoe.Vistas
             else WindowState = WindowState.Normal;
         }
 
-        private void Inicio_click(object sender, RoutedEventArgs e)
+        private void Proveidor_click(object sender, RoutedEventArgs e)
         {
-            Inicio ini = new Inicio();
+            Proveidor ini = new Proveidor();
             grid.Children.Add(ini);
             grid.Visibility = Visibility.Visible;
         }
@@ -74,7 +75,7 @@ namespace Zoe.Vistas
 
         private void Categoria_click(object sender, RoutedEventArgs e)
         {
-            categoria catg = new categoria();
+            Categoria catg = new Categoria();
             grid.Children.Add(catg);
             grid.Visibility = Visibility.Visible;
 

@@ -36,11 +36,24 @@ namespace Zoe
                     MessageBox.Show("La descripción tiene que ser de 150 carácteres como máximo.");
             }
         }
+        public Dictionary<Producte, int> Productes
+        {
+            get { return productes; }
+        }
         public double Preu
         {
             get { return preu; }
         }
-
+        public Pack(int id, string n, string d, double p)
+        {
+            this.id = id;
+            nom = n;
+            if (d.Length < 151)
+                descripcio = d;
+            else
+                MessageBox.Show("La descripción tiene que ser de 150 carácteres como máximo.");
+            preu = p;
+        }
         public Pack(int id, string n, string d, double p, Dictionary<Producte, int> prod)
         {
             this.id = id;

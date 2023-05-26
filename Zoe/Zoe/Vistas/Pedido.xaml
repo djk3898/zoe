@@ -23,7 +23,15 @@
                     <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Calendar/>
+
+            <StackPanel Orientation="Vertical" Margin="20, 10, 10, 20">
+                <TextBlock Text="Pedidos" FontWeight="Bold" Margin="0,20,0,20"/>
+                <DataGrid x:Name="dataGridComandes" ItemsSource="{Binding Comandes}" AutoGenerateColumns="False" Margin="0,20,10,10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Pedidos" Binding="{Binding}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
 
         </Border>
     </Grid>

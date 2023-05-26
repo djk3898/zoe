@@ -12,17 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zoe.Negoci;
 
 namespace Zoe.Vistas
 {
     /// <summary>
-    /// Lógica de interacción para Inicio.xaml
+    /// Lógica de interacción para Proveidors.xaml
     /// </summary>
-    public partial class Inicio : UserControl
+    public partial class Proveidor : UserControl
     {
-        public Inicio()
+        public Proveidor()
         {
             InitializeComponent();
+            Botiga botiga = new Botiga();
+            dataGridProveidors.ItemsSource = botiga.Proveidors;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Zoe.AccesDades;
 
 namespace Zoe.Clases.Negoci
 {
@@ -10,6 +11,10 @@ namespace Zoe.Clases.Negoci
         private List<Pack> packs;
         private Usuari comprador;
         private double preuTotal;
+
+        int idComprador;
+        string packsAdmin;
+        string productesAdmin;
 
         public Pack Pack
         {
@@ -26,8 +31,40 @@ namespace Zoe.Clases.Negoci
             {
             }
         }
-
-        public Comanda(List<Pack> p, Usuari u)
+        public int NumComanda
+        {
+            get { return numComanda; }
+        }
+        public int IdComprador
+        {
+            get { return idComprador; }
+        }
+        public DateTime Data
+        {
+            get { return data; }
+        }
+        public double Total
+        {
+            get { return preuTotal; }
+        }
+        public string Packs
+        {
+            get { return packsAdmin; }
+        }
+        public string Productes
+        {
+            get { return productesAdmin; }
+        }
+        public Comanda(int id, int usuari, DateTime data, double total, string packs, string productes)    //amb aquest constructor creem un objecte comanda per a l'admin
+        {
+            numComanda = id;
+            idComprador = usuari;
+            this.data = data;
+            preuTotal = total;
+            packsAdmin = packs;
+            productesAdmin = productes;
+        }
+        public Comanda(List<Pack> p, Usuari u)  //amb aquest constructor creem un objecte comanda per al client
         {
             numComanda = GenerarNumComanda();
             data = DateTime.Today;
@@ -54,8 +91,22 @@ namespace Zoe.Clases.Negoci
                 preuTotal += pack.Preu;
             }
         }
-        //public string GenerarFactura()
-        public string ToString() 
+        public void GenerarFactura()  //amb aquest metode guardem la comanda a la bbdd, perque la pugui veure l'admin
+        {
+            Command cmd = new Command();
+            string packsLlista = "", productesLlista = "";
+            foreach (Pack pack in packs)
+            {
+                packsLlista += pack.Nom;
+                foreach (Producte p in pack.Productes.Keys)
+                {
+                    productesLlista += p.Nom;
+                }
+            }
+            cmd.GuardarComanda($"insert into Comanda values({numComanda}, {comprador.Id}, {data.ToString("yyyy-mm-dd hh-mm-ss")}, {Convert.ToDecimal(preuTotal)}, '{packsLlista}', '{productesLlista}')");
+        }
+
+        public string ToString() //amb aquest metode el client pot visualitzar la comanda
         {
             string factura;
 
