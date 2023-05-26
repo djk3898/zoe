@@ -51,18 +51,15 @@ namespace Zoe
             contra = c;
             
         }
-        public Usuari(string r, string n, string c, string e, string p, string d, int cp, int t) : this(r, n, c)
+        public Usuari(int _id,string r, string n, string c, string e, string p, string d, int cp, int t) : this(r, n, c)
         {
             email = e;
             provincia = p;
             direccio = d;
             cPostal = cp;
             telf = t;
-            id = GenerarIdUsuari();
+            id = _id+telf;
         }
-        private int GenerarIdUsuari()
-        {
-            return Convert.ToInt32(rol) + telf;
-        }
+       
     }
 }

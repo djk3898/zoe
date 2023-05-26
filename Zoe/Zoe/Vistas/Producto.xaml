@@ -23,26 +23,26 @@
                     <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            
+
             <StackPanel Orientation="Horizontal" Margin="20, 10, 10, 10">
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Productes" FontWeight="Bold" Margin="0,20,0,10"/>
-                    <DataGrid x:Name="dataGridProductes" ItemsSource="{Binding Productes}" AutoGenerateColumns="True" Margin="0,20,10,10">
+                    <TextBlock Text="Productes" Foreground="{StaticResource panelOverColor }" FontWeight="Bold"  Margin="0,20,0,10"/>
+                    <DataGrid x:Name="dataGridProductes" ItemsSource="{Binding Productes}" AutoGenerateColumns="True" Margin="0,20,10,10" BorderBrush="{x:Null}" Background="{x:Null}">
                         <DataGrid.Columns>
                             <!-- Columnas para las propiedades de Producte -->
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Packs" FontWeight="Bold" Margin="0,20,0,10"/>
-                    <DataGrid x:Name="dataGridPacks" ItemsSource="{Binding Packs}" AutoGenerateColumns="True" Margin="0,20,10,10">
+                    <TextBlock Text="Packs" Foreground="{StaticResource panelOverColor }" FontWeight="Bold" Margin="0,20,0,10"/>
+                    <DataGrid x:Name="dataGridPacks" ItemsSource="{Binding Packs}" AutoGenerateColumns="True" Margin="0,20,10,10" Background="{x:Null}" BorderBrush="{x:Null}">
                         <DataGrid.Columns>
                             <!-- Columnas para las propiedades de Producte -->
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
             </StackPanel>
-            
+
         </Border>
     </Grid>
 </UserControl>

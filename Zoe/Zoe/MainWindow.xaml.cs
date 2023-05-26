@@ -70,6 +70,9 @@ namespace Zoe
                     int telef = login.SelectInt($"select telefon from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     usuari = new("client", user, contra, email, provincia, direccio, cp, telef);
                     //obra finestra client
+                    ClienteVista finestraClient = new();
+                    finestraClient.WindowState = WindowState.Maximized;
+                    finestraClient.Show();
 
                 }
             }
