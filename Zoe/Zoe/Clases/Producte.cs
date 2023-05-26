@@ -43,13 +43,14 @@ namespace Zoe
         public double Preu
         {
             get { return preu; }
+            set { preu = value; }
         }
         public int Estoc
         {
             get { return estoc; }
             set { estoc = value; }
         }
-        public Producte(int id, string nom, string descripcio, double preu, int estoc, string categoria, string proveidor)
+        public Producte( int id,string nom, string descripcio, double preu, int estoc, string categoria, string proveidor)
         {
             this.id = id;
             this.nom = nom;
@@ -62,5 +63,7 @@ namespace Zoe
             this.categoria = categoria;
             this.proveidor = proveidor;
         }
+
     }
+
 }
