@@ -23,7 +23,70 @@
                     <GradientStop Color="{StaticResource winBorderColor3}" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-            <Calendar/>
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Modificar" Foreground="{StaticResource panelOverColor }" FontWeight="Bold"  Margin="0,20,0,10"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Height="180">
+                    <TextBlock Text="Producte" Foreground="{StaticResource panelOverColor }" FontWeight="Bold"  Margin="20,20,0,10"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nombre"/>
+                        <TextBox x:Name="txtboxNom" Width="200" Height="20" Margin="9, 0, 50, 0"></TextBox>
+                        <Label Content="Descripción"/>
+                        <TextBox x:Name="txtboxDescripcio" IsReadOnly="True" Width="200" Height="20" Margin="13, 0, 50, 0"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Precio"/>
+                        <TextBox x:Name="txtboxPreu" IsReadOnly="True" Width="200" Height="20" Margin="20, 0, 50, 0"></TextBox>
+                        <Label Content="Estoc"/>
+                        <TextBox x:Name="txtboxEstoc" IsReadOnly="True" Width="200" Height="20" Margin="47, 0, 50, 0"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Categoria"/>
+                        <TextBox x:Name="txtboxCategoria" IsReadOnly="True" Width="200" Height="20" Margin="2, 0, 50, 0"></TextBox>
+                        <Label Content="Proveedor"/>
+                        <TextBox x:Name="txtboxProveidor" IsReadOnly="True" Width="200" Height="20" Margin="20, 0, 50, 0"></TextBox>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="btnBuscarProd" Content="Buscar" Width="250" Margin="100, 20, 0, 0" Click="btnBuscarProd_Click"/>
+                        <Button x:Name="btnEliminarProd" Content="Eliminar" Width="250" Margin="100, 20, 0, 0" Click="btnEliminarProd_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Vertical" Height="160">
+                    <TextBlock Text="Pack" Foreground="{StaticResource panelOverColor }" FontWeight="Bold"  Margin="20,20,0,10"/>
+                    <StackPanel Orientation="Horizontal">
+
+                        <StackPanel Orientation="Vertical" Width="450">
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Nombre"/>
+                                <TextBox x:Name="txtboxNomPack" Width="200" Height="20" Margin="29.5, 0, 50, 0"></TextBox>
+                                <Label Content="Productes"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Descripción"/>
+                                <TextBox x:Name="txtboxDescripcioPack" IsReadOnly="True" Width="200" Height="20" Margin="12, 0, 50, 0"></TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Precio"/>
+                                <TextBox x:Name="txtboxPreuPack" IsReadOnly="True" Width="200" Height="20" Margin="41, 0, 50, 0"></TextBox>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Width="350">
+                            <ListBox x:Name="listboxProdPack" ItemsSource="{Binding ProdPackList}" Width="350" Margin="0,0,20,0" Height="85" BorderThickness="0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="btnBuscarPack" Content="Buscar" Width="250" Margin="100, 0, 0, 0" Click="btnBuscarPack_Click"/>
+                    <Button x:Name="btnEliminarPack" Content="Eliminar" Width="250" Margin="100, 0, 0, 0" Click="btnEliminarPack_Click"/>
+                </StackPanel>
+            </StackPanel>
 
         </Border>
     </Grid>

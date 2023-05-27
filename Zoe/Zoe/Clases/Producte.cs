@@ -50,6 +50,14 @@ namespace Zoe
             get { return estoc; }
             set { estoc = value; }
         }
+        public string Categoria
+        {
+            get { return categoria; }
+        }
+        public string Proveidor
+        {
+            get { return proveidor; }
+        }
         public Producte( int id,string nom, string descripcio, double preu, int estoc, string categoria, string proveidor)
         {
             this.id = id;
@@ -62,6 +70,20 @@ namespace Zoe
             this.estoc = estoc;
             this.categoria = categoria;
             this.proveidor = proveidor;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Producte other = (Producte)obj;
+            return Id == other.Id && Nom == other.Nom;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id, Nom);
         }
 
     }
