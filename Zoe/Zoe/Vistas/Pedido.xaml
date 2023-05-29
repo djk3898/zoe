@@ -25,7 +25,7 @@
             </Border.Background>
 
             <StackPanel Orientation="Vertical" Margin="20, 10, 10, 20">
-                <TextBlock Text="Pedidos" FontWeight="Bold" Margin="0,20,0,20"/>
+                <TextBlock Text="Pedidos" Margin="0,20,0,20" FontWeight="Bold" FontSize="16" Foreground="{StaticResource panelOverColor}"/>
                 <DataGrid x:Name="dataGridComandes" ItemsSource="{Binding Comandes}" AutoGenerateColumns="False" Margin="0,20,10,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Número Comanda" Binding="{Binding NumComanda}" />

@@ -26,11 +26,21 @@
 
             <StackPanel Orientation="Vertical"  Margin="20, 10, 10, 20">
                 <TextBlock Text="Categorias" Foreground="{StaticResource panelOverColor}" FontWeight="ExtraBold" FontSize="25" Margin="0,20,0,20"/>
-                <DataGrid x:Name="dataGridCategories" ItemsSource="{Binding Categories}" Foreground="{StaticResource panelOverColor }" FontSize="20" FontWeight="Bold" AutoGenerateColumns="False" Width="170" HorizontalAlignment="Left" Height="340" Background="Transparent" BorderBrush="Transparent">
+                <DataGrid x:Name="dataGridCategories" 
+                          ItemsSource="{Binding Categories}" 
+                          Foreground="{StaticResource panelOverColor }" 
+                          FontSize="20" FontWeight="Bold" 
+                          AutoGenerateColumns="False" 
+                          Width="170" HorizontalAlignment="Left" Height="340" 
+                          Background="Transparent" BorderBrush="Transparent"
+                          CanUserResizeColumns="True"
+                          RowBackground="Transparent"
+                          
+                          >
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Categorias" Width="170" Binding="{Binding}"  Foreground="Pink"/>
+                        
+                        <DataGridTextColumn Header="Categorias" Width="*" Binding="{Binding}"  Foreground="Pink"/>
                     </DataGrid.Columns>
-
                 </DataGrid>
 
                 <StackPanel Orientation="Horizontal">

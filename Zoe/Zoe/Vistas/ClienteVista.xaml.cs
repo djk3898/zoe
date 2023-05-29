@@ -19,9 +19,11 @@ namespace Zoe.Vistas
     /// </summary>
     public partial class ClienteVista : Window
     {
-        public ClienteVista()
+        Usuari client;
+        public ClienteVista(Usuari usuari)
         {
             InitializeComponent();
+            client = usuari;
         }
         private void panelArrastraryMover(object sender, MouseButtonEventArgs e)
         {
@@ -43,7 +45,7 @@ namespace Zoe.Vistas
         }
         private void Productos_click(object sender, RoutedEventArgs e)
             {
-                Producto prod = new Producto();
+                ProductoCliente prod = new ProductoCliente(client);
                 grid.Children.Add(prod);
                 grid.Visibility = Visibility.Visible;
 
@@ -59,12 +61,13 @@ namespace Zoe.Vistas
 
             private void Pedido_click(object sender, RoutedEventArgs e)
             {
-                Pedido pedido = new Pedido();
+                PedidosCliente pedido = new PedidosCliente();
                 grid.Children.Add(pedido);
                 grid.Visibility = Visibility.Visible;
 
             }
-      
+
+        
     }
     }
 

@@ -13,6 +13,18 @@
     <None Remove="image0.png" />
     <None Remove="Imagenes\home.svg" />
     <None Remove="Imagenes\key-icon.png" />
+    <None Remove="Imagenes\Productos\1.png" />
+    <None Remove="Imagenes\Productos\10.png" />
+    <None Remove="Imagenes\Productos\11.png" />
+    <None Remove="Imagenes\Productos\12.png" />
+    <None Remove="Imagenes\Productos\2.png" />
+    <None Remove="Imagenes\Productos\3.png" />
+    <None Remove="Imagenes\Productos\4.png" />
+    <None Remove="Imagenes\Productos\5.png" />
+    <None Remove="Imagenes\Productos\6.png" />
+    <None Remove="Imagenes\Productos\7.png" />
+    <None Remove="Imagenes\Productos\8.png" />
+    <None Remove="Imagenes\Productos\9.png" />
     <None Remove="Imagenes\regalo.svg" />
     <None Remove="Imagenes\register\correo.png" />
     <None Remove="Imagenes\register\cp.png" />
@@ -31,6 +43,42 @@
   <ItemGroup>
     <Resource Include="Imagenes\image0.png" />
     <Resource Include="Imagenes\key-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Imagenes\Productos\9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Imagenes\register\cp.png" />

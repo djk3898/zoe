@@ -67,22 +67,10 @@
                     <RadioButton Style="{StaticResource bttMenu}"
                                  Tag="{StaticResource panelOverColor}"
                                  IsChecked="True"
-                                 Click="Productos_click">
+                                 Click="Productos_click" >
                         <StackPanel Orientation="Horizontal">
                             <fon:IconImage Icon="Gift" Style="{StaticResource bttMenuIcono}"/>
                             <TextBlock Text="Productos" Style="{StaticResource bttMenuTxt}"/>
-                        </StackPanel>
-                    </RadioButton>
-
-                    
-
-                    <RadioButton Style="{StaticResource bttMenu}"
-                                 Tag="{StaticResource panelOverColor}"
-                                 IsChecked="True"
-                                 Click="Categoria_click">
-                        <StackPanel Orientation="Horizontal">
-                            <fon:IconImage Icon="Bars" Style="{StaticResource bttMenuIcono}"/>
-                            <TextBlock Text="Categorías" Style="{StaticResource bttMenuTxt}"/>
                         </StackPanel>
                     </RadioButton>
 

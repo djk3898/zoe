@@ -34,7 +34,7 @@
                     </DataGrid>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Packs" Foreground="{StaticResource panelOverColor }" FontWeight="Bold" Margin="0,20,0,10"/>
+                    <TextBlock Text="Packs" Foreground="{StaticResource panelOverColor }" FontWeight="Bold" Margin="0,20,0,10" RenderTransformOrigin="1.25,0.819"/>
                     <DataGrid x:Name="dataGridPacks" ItemsSource="{Binding Packs}" AutoGenerateColumns="True" Margin="0,20,10,10" Background="{x:Null}" BorderBrush="{x:Null}">
                         <DataGrid.Columns>
                             <!-- Columnas para las propiedades de Producte -->

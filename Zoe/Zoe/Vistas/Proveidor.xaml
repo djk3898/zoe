@@ -25,19 +25,34 @@
             </Border.Background>
 
             <StackPanel Orientation="Vertical" Margin="20, 10, 10, 20">
-                <TextBlock Text="Proveedores" FontWeight="Bold" Margin="0,20,0,20"/>
+                <TextBlock Text="Proveedores" Margin="0,20,0,20" FontWeight="Bold" FontSize="18" Foreground="{StaticResource panelOverColor}"/>
                 <DataGrid x:Name="dataGridProveidors" ItemsSource="{Binding Proveidors}" AutoGenerateColumns="False" Margin="0,20,10,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Proveedores" Binding="{Binding}" />
                     </DataGrid.Columns>
                 </DataGrid>
-                
+
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="txtBox_Nom" TextWrapping="Wrap" Text="" Width="200" Margin="10"/>
-                    <Button x:Name="btnAfegir" Content="Afegir" Width="100" Margin="10" Click="btnAfegir_Click"/>
-                    <Button x:Name="btnEliminar" Content="Eliminar" Width="100" Margin="10" Click="btnEliminar_Click"/>
+                    <Button x:Name="btnAfegir" Content="Afegir" Width="100" Margin="10" Click="btnAfegir_Click" Foreground="#FFF7ECEC" FontFamily="Arial" FontSize="14" FontWeight="Bold">
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{DynamicResource color12}"/>
+                        </Button.BorderBrush>
+
+                        <Button.Background>
+                            <SolidColorBrush Color="#FF07B0F3"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btnEliminar" Content="Eliminar" Width="100" Margin="10" Click="btnEliminar_Click" Foreground="#FFF7ECEC" FontFamily="Arial" FontSize="14" FontWeight="Bold">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource color11}"/>
+                        </Button.Background>
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="{StaticResource color11}"/>
+                        </Button.BorderBrush>
+                    </Button>
                 </StackPanel>
-                
+
             </StackPanel>
 
         </Border>

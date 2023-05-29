@@ -7,6 +7,10 @@
     <Color x:Key="secondaryBackColor1">#DA34AE</Color>
     <Color x:Key="secondaryBackColor2">#210F55</Color>
     <Color x:Key="secondaryBackColor3">#C62DAE</Color>
+    <Color x:Key="color11">#FFCE8F91</Color>
+    <Color x:Key="color12">#FF07B0F3</Color>
+
+
     <!--Window Border Colors-->
     <Color x:Key="winBorderColor1">#6D2FFF</Color>
     <Color x:Key="winBorderColor2">#FFEBABAD</Color>
@@ -22,6 +26,8 @@
     <SolidColorBrush x:Key="color8" Color="#78A3FC"/>
     <SolidColorBrush x:Key="color9" Color="#07F3C0"/>
     <SolidColorBrush x:Key="color10" Color="#FBA1AA"/>
+
+    
    
     <!--Panel Colors-->
     <SolidColorBrush x:Key="panelColor" Color="#216062"/>

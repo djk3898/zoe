@@ -71,7 +71,7 @@ namespace Zoe
                     int telef = login.SelectInt($"select telefon from Usuari where nom = '{user}' and contrasenya = '{contra}'");
                     usuari = new(id, "client", user, contra, email, provincia, direccio, cp, telef);
                     //obra finestra client
-                    ClienteVista finestraClient = new();
+                    ClienteVista finestraClient = new(usuari);
                     finestraClient.WindowState = WindowState.Maximized;
                     finestraClient.Show();
                     //tanca la finestra de login

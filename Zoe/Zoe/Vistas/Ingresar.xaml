@@ -1,0 +1,47 @@
+﻿<Window x:Class="Zoe.Vistas.Ingresar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zoe.Vistas"
+        mc:Ignorable="d"
+        Title="Ingresar"
+        WindowStyle="None"
+        FontSize="20"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Height="120" Width="200">
+    <Border CornerRadius="10"
+            Background="White"
+            Opacity="0.8">
+        <Grid>
+            <Label x:Name="lbltxtCantidad" Content="Nueva Cantidad" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="152">
+                <Label.Foreground>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+                </Label.Foreground>
+            </Label>
+            <TextBox x:Name="txtBoxNuevaCantidad" HorizontalAlignment="Center" Margin="0,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Background="{x:Null}">
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="{StaticResource secondaryBackColor1}"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <Button x:Name="bttOk" Content="OK" HorizontalAlignment="Left" Margin="24,86,0,0" VerticalAlignment="Top" Width="56" FontSize="16" Foreground="#FFF0EFF1" FontWeight="Bold" Click="bttOk_Click">
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource color12}"/>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <SolidColorBrush Color="{DynamicResource color12}"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="bttCancelar" Content="CANCELAR" HorizontalAlignment="Left" Margin="90,86,0,0" VerticalAlignment="Top" Width="86" FontSize="16" Foreground="#FFF0EFF1" FontWeight="Bold" Click="bttCancelar_Click" >
+                <Button.Background>
+                    <SolidColorBrush Color="{DynamicResource color11}"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="{DynamicResource color11}"/>
+                </Button.BorderBrush>
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>

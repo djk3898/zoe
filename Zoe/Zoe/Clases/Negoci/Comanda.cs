@@ -7,7 +7,7 @@ namespace Zoe.Clases.Negoci
     public class Comanda
     {
         private int numComanda;
-        private DateTime data;
+        private DateTime data=DateTime.Now;
         private List<Pack> packs;
         private Usuari comprador;
         private double preuTotal;
@@ -64,18 +64,18 @@ namespace Zoe.Clases.Negoci
             packsAdmin = packs;
             productesAdmin = productes;
         }
-        public Comanda(List<Pack> p, Usuari u)  //amb aquest constructor creem un objecte comanda per al client
+        public Comanda(Usuari u)  //amb aquest constructor creem un objecte comanda per al client
         {
             numComanda = GenerarNumComanda();
             data = DateTime.Today;
-            packs = p;
             comprador = u;
-            PreuTotal();
         }
 
         private int GenerarNumComanda()
         {
-            return Convert.ToInt32(data) + comprador.Id;
+            string dataTostrign = data.ToString("yyyyMMdd");
+
+            return int.Parse(dataTostrign) + comprador.Id;
         }
         public void AfegirCarrito(Pack p)
         {
